@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QazaqWings — Travel around the world</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: bisque;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      header {
+        background: #ffffffcc;
+        border-bottom: 2px solid #f0caa0;
+        padding: 20px;
+      }
+
+      .brand {
+        margin: 0;
+        color: rgb(255, 0, 60);
+      }
+
+      nav a {
+        color: #222;
+        text-decoration: none;
+        margin-right: 12px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .lead {
+        margin-top: 6px;
+      }
+
+      h2 {
+        margin-top: 28px;
+        color: rgb(255, 0, 60);
+      }
+
+      .why-title {
+        color: rgb(255, 0, 60);
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: #ffffffcc;
+        border: 1px solid #f0caa0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card-body {
+        padding: 12px 14px;
+      }
+
+      .price {
+        font-weight: bold;
+        color: #0b6b3a;
+      }
+
+      form {
+        background: #ffffffcc;
+        border: 1px solid #f0caa0;
+        border-radius: 10px;
+        padding: 14px;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        max-width: 420px;
+        padding: 8px;
+        margin-top: 6px;
+        border: 1px solid #c9c9c9;
+        border-radius: 6px;
+      }
+
+      button {
+        margin-top: 12px;
+        padding: 10px 14px;
+        border: 0;
+        border-radius: 8px;
+        background: rgb(255, 0, 60);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      footer {
+        margin-top: 30px;
+        padding: 16px 20px;
+        background: #ffffffcc;
+        border-top: 2px solid #f0caa0;
+      }
+
+      .small {
+        font-size: 12px;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="brand">QazaqWings — travel around the world with us!</h1>
+      <p class="lead">Find and book flights worldwide. Simple search, clear prices, fast checkout.</p>
+
+      <nav>
+        <a href="#why">Why us</a>
+        <a href="#deals">Hot sales</a>
+        <a href="#search">Search</a>
+        <a href="#contacts">Contacts</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="why">
+        <h2>Why us?</h2>
+        <p class="why-title">Because booking should be easy.</p>
+        <ol>
+          <li>Simple search.</li>
+          <li>Clear prices (no surprises at the end).</li>
+          <li>Fast checkout.</li>
+        </ol>
+      </section>
+
+      <section id="deals">
+        <h2>Hot sales!</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=bbeca0a7d23ca1e6248a0b7e090a7197_l-5239380-images-thumbs&n=13"
+              alt="Thailand beach view"
+            />
+            <div class="card-body">
+              <h3>Thailand</h3>
+              <p>Warm sea, street food, and temples.</p>
+              <p class="price">30 days — $1000</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="https://www.shkolazhizni.ru/img/content/i243/243489_or.jpg"
+              alt="Dubai skyline"
+            />
+            <div class="card-body">
+              <h3>Dubai</h3>
+              <p>Modern city, shopping, and desert tours.</p>
+              <p class="price">15 days — $1100</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img
+              src="https://i.ytimg.com/vi/rBWQ62BDDM8/maxresdefault.jpg"
+              alt="Egypt pyramids"
+            />
+            <div class="card-body">
+              <h3>Egypt</h3>
+              <p>History, pyramids, and sea отдых.</p>
+              <p class="price">20 days — $600</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="search">
+        <h2>Search flights (demo)</h2>
+        <p>Fill the form to simulate a flight search (for a beginner project, it can be non-working).</p>
+
+        <form>
+          <label for="from">From</label>
+          <input id="from" name="from" type="text" placeholder="Almaty (ALA)" />
+
+          <label for="to">To</label>
+          <input id="to" name="to" type="text" placeholder="Istanbul (IST)" />
+
+          <label for="depart">Departure date</label>
+          <input id="depart" name="depart" type="date" />
+
+          <label for="passengers">Passengers</label>
+          <select id="passengers" name="passengers">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+
+          <button type="submit">Search</button>
+
+          <p class="small">Student demo: tickets and payments are not real.</p>
+        </form>
+      </section>
+
+      <section id="contacts">
+        <h2>Contacts</h2>
+        <ul>
+          <li>Email: support@qazaqwings.example</li>
+          <li>Working hours: 09:00–21:00 (Almaty time)</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p class="small">© 2026 QazaqWings. Beginner web project.</p>
+    </footer>
+  </body>
+</html>
