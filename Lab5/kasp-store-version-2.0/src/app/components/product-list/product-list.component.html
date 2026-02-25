@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="logo">
+    <img src="https://companieslogo.com/img/orig/KKS.F-9d710a31.png?t=1720244492" alt="Kaspi Logo" id="kaspi-logo_style">
+    <h2>Kaspi.kz</h2>
+  </div>
+  <div class="list-container">
+
+  <div *ngIf="products.length === 0" class="empty-state">
+    <span>📭</span>
+    <p>В этой категории нет товаров</p>
+  </div>
+
+  <div class="product-grid">
+    <app-product-item
+      *ngFor="let product of products"
+      [product]="product"
+      (deleteProduct)="onDelete($event)">
+    </app-product-item>
+  </div>
+  
+
+</div>
+</div>
